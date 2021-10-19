@@ -1,2 +1,2 @@
 # simulation-GUI
-A simple example GUI for running simulation scripts and analyzing simulation generated data.
+A PyQt example GUI for running simulation scripts and analyzing simulation generated data.
