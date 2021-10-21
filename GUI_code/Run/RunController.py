@@ -78,7 +78,7 @@ class SimController(Controller):
         #print("selection:", selection)
         inputParams = self.construct_inputparam_string(selection)
         #set simulation script to execute
-        simscript_name = "simulation.py"
+        simscript_name = "simulation"
         #check if simulation script exists in path
         sim_path = f"{settings.BASE_DIR}/Simulation/"
         if os.path.isfile(f"{sim_path}{simscript_name}"):
@@ -96,8 +96,7 @@ class SimController(Controller):
         return inputParams
 
     def start_simulation_process(self, sim_path, simscript_name, inputParams):
-        #execute_sim_command = "python {} {}".format(simscript_name, inputParams)
-            execute_sim_command = f"python {sim_path}{simscript_name} {inputParams}"
+            execute_sim_command = f"{sim_path}{simscript_name} {inputParams}"
             print("command:", execute_sim_command)
             #print(execute_sim_command)
             self.simProcess = QProcess()
